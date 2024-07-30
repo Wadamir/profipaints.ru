@@ -1,0 +1,161 @@
+[29-Jul-2024 19:10:24 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:10:25 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:10:25 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:12:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:12:44 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:12:58 UTC] PHP Deprecated:  Hook block_editor_settings is <strong>deprecated</strong> since version 5.8.0! Use block_editor_settings_all instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:12:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-includes/functions.php:6085) in /var/www/html/wp-admin/admin-header.php on line 9
+[29-Jul-2024 19:13:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:13:28 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:13:31 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:13:31 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:13:31 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:13:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:13:40 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:13:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:13:53 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:13:54 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:13:54 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:14:04 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:14:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero-footer.php on line 37
+[29-Jul-2024 19:14:05 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4482
+[29-Jul-2024 19:22:37 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:29:41 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:29:50 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:31:22 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:34:48 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:39:59 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:40:43 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:45:24 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:45:33 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:45:36 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:47:37 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:49:12 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[29-Jul-2024 19:53:10 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[29-Jul-2024 19:53:31 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:53:31 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:53:31 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:53:31 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:10 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:10 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:10 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:10 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:30 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:30 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:30 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:30 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:38 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:38 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:38 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:38 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:39 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:44 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:54:45 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:00 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:00 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:00 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:00 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:01 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:02 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:02 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:02 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:02 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:03 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:03 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:03 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:03 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:08 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:08 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:08 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:08 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:38 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:38 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:38 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:38 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:55:40 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:55:40 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:55:40 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:55:40 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:56:16 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 117
+[29-Jul-2024 19:56:16 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:56:16 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:56:16 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:57:13 UTC] PHP Warning:  Undefined variable $hcl1_btn1_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 120
+[29-Jul-2024 19:57:13 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:57:13 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:57:30 UTC] PHP Warning:  Undefined variable $hcl1_btn2_text in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 129
+[29-Jul-2024 19:57:30 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:58:14 UTC] PHP Warning:  Undefined variable $hcl1_smalltext in /var/www/html/wp-content/themes/profipaints/section-parts/section-hero.php on line 132
+[29-Jul-2024 19:58:45 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 06:33:38 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 06:34:30 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 06:37:27 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 08:16:38 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 08:16:56 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 09:12:27 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 09:14:37 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 09:14:58 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 09:16:19 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 09:17:32 UTC] PHP Deprecated:  Function wp_make_content_images_responsive is <strong>deprecated</strong> since version 5.5.0! Use wp_filter_content_tags() instead. in /var/www/html/wp-includes/functions.php on line 6085
+[30-Jul-2024 09:20:16 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 09:20:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wp_image_add_srcset_and_sizes(), 1 passed in /var/www/html/wp-includes/class-wp-hook.php on line 324 and exactly 3 expected in /var/www/html/wp-includes/media.php:1730
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(324): wp_image_add_srcset_and_sizes('<p>Profipaints\xC2...')
+#1 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('<p>Profipaints\xC2...', Array)
+#2 /var/www/html/wp-content/themes/profipaints/section-parts/section-aboutus.php(40): apply_filters('profipaints_the...', 'Profipaints\xC2\xA0 -...')
+#3 /var/www/html/wp-includes/template.php(812): require('/var/www/html/w...')
+#4 /var/www/html/wp-includes/template.php(745): load_template('/var/www/html/w...', false, Array)
+#5 /var/www/html/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#6 /var/www/html/wp-content/themes/profipaints/inc/template-tags.php(2074): get_template_part('section-parts/s...', 'aboutus')
+#7 /var/www/html/wp-content/themes/profipaints/template-frontpage.php(30): profipaints_load_section('aboutus')
+#8 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#9 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#10 /var/www/html/index.php(17): require('/var/www/html/w...')
+#11 {main}
+  thrown in /var/www/html/wp-includes/media.php on line 1730
+[30-Jul-2024 09:22:09 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 09:38:20 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:09:08 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:35:31 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:36:09 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:37:28 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:37:50 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:38:09 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:38:33 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:39:44 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 10:45:12 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 11:22:25 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 14:59:45 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 15:15:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 15:16:11 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 15:17:21 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 15:50:47 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 15:55:11 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
