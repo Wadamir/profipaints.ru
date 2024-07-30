@@ -159,3 +159,4 @@ Stack trace:
 [30-Jul-2024 15:17:21 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
 [30-Jul-2024 15:50:47 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
 [30-Jul-2024 15:55:11 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[30-Jul-2024 16:27:48 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
