@@ -2,7 +2,7 @@
 $id       = get_theme_mod('profipaints_features_id', esc_html__('features', 'profipaints'));
 $disable  = get_theme_mod('profipaints_features_disable') == 1 ? true : false;
 $meta_class = get_theme_mod('profipaints_features_meta') == 1 ? 'profipaints-meta' : '';
-$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-features section-padding-60 onepage-section {$meta_class}", 'features'));
+$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-features section-padding-70 onepage-section {$meta_class}", 'features'));
 $title    = get_theme_mod('profipaints_features_title', esc_html__('Features', 'profipaints'));
 $subtitle = get_theme_mod('profipaints_features_subtitle', esc_html__('Why choose Us', 'profipaints'));
 $layout = intval(get_theme_mod('profipaints_features_layout', 4));
@@ -65,7 +65,7 @@ if (!$disable && !empty($data)) {
                         }
                     ?>
                         <div class="col-12 col-md-6 col-lg-<?php echo $layout ?> mb-10">
-                            <div class="feature-item meta-color h-100">
+                            <div class="feature-item meta-color h-100 rounded-secondary">
                                 <div class="feature-media">
                                     <?php echo $media; ?>
                                 </div>

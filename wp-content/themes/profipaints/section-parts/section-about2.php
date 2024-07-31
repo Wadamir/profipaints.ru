@@ -2,7 +2,7 @@
 $id       = get_theme_mod('profipaints_about2_id', esc_html__('about2', 'profipaints'));
 $disable  = get_theme_mod('profipaints_about2_disable') == 1 ? true : false;
 $meta_class = get_theme_mod('profipaints_about2_meta') == 1 ? 'profipaints-meta' : '';
-$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-about2 section-padding-60 onepage-section {$meta_class}", 'about2'));
+$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-about2 section-padding-40 onepage-section {$meta_class}", 'about2'));
 $title    = get_theme_mod('profipaints_about2_title', esc_html__('about2', 'profipaints'));
 $subtitle = get_theme_mod('profipaints_about2_subtitle', esc_html__('Why choose Us', 'profipaints'));
 $layout = intval(get_theme_mod('profipaints_about2_layout', 4));
@@ -51,7 +51,7 @@ if (!$disable && !empty($data)) {
                         }
                     ?>
                         <div class="col-12 col-md-6 col-lg-<?php echo $layout ?> mb-10">
-                            <div class="about2-item meta-color h-100">
+                            <div class="about2-item meta-color h-100 rounded-secondary">
                                 <div class="about2-content">
                                     <div class="about2-media text-center"><?php echo $media; ?></div>
                                     <div class="about2-item-content"><?php echo apply_filters('the_content', $f['desc']); ?></div>

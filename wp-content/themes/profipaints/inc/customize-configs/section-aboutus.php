@@ -6,7 +6,7 @@
 $wp_customize->add_panel(
     'profipaints_aboutus',
     array(
-        'priority'        => 150,
+        'priority'        => 160,
         'title'           => esc_html__('Раздел: О компании', 'profipaints'),
         'description'     => '',
         'active_callback' => 'profipaints_showon_frontpage'

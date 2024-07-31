@@ -2,7 +2,7 @@
 $id       = get_theme_mod('profipaints_aboutus_id', esc_html__('aboutus', 'profipaints'));
 $disable  = get_theme_mod('profipaints_aboutus_disable') == 1 ? true : false;
 $meta_class = get_theme_mod('profipaints_aboutus_meta') == 1 ? 'profipaints-meta' : '';
-$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-aboutus section-padding-10 onepage-section {$meta_class}", 'aboutus'));
+$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-aboutus section-padding-70 onepage-section {$meta_class}", 'aboutus'));
 $title    = get_theme_mod('profipaints_aboutus_title', esc_html__('aboutus', 'profipaints'));
 $subtitle = get_theme_mod('profipaints_aboutus_subtitle', esc_html__('Why choose Us', 'profipaints'));
 $description = get_theme_mod('profipaints_aboutus_desc');
@@ -26,11 +26,11 @@ if (!$disable) {
         <section id="<?php echo ($id !== '') ? esc_attr($id) : 'aboutus'; ?>" <?php do_action('profipaints_section_atts', 'aboutus'); ?> class="<?php echo $section_classes; ?>">
         <?php } ?>
         <?php do_action('profipaints_section_before_inner', 'aboutus'); ?>
-        <div class="<?php echo esc_attr(apply_filters('profipaints_section_container_class', 'container-fluid', 'aboutus')); ?>">
+        <div class="<?php echo esc_attr(apply_filters('profipaints_section_container_class', 'container', 'aboutus')); ?>">
 
-            <div class="row row-fluid">
-                <div class="col-12 col-md-6 ps-0">
-                    <div class="aboutus-section-desc">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="aboutus-section-desc rounded-secondary">
                         <?php if ($title ||  $subtitle || $desc) { ?>
                             <div class="section-title-area">
                                 <?php if ($subtitle != '') echo '<h5 class="section-subtitle">' . esc_html($subtitle) . '</h5>'; ?>
@@ -42,8 +42,8 @@ if (!$disable) {
                         } ?>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 pe-0">
-                    <div class="aboutus-bg" <?php echo $background_image ?>></div>
+                <div class="col-12 col-md-6">
+                    <div class="aboutus-bg rounded-secondary" <?php echo $background_image ?>></div>
                 </div>
             </div>
 

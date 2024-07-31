@@ -160,3 +160,12 @@ Stack trace:
 [30-Jul-2024 15:50:47 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
 [30-Jul-2024 15:55:11 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
 [30-Jul-2024 16:27:48 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[31-Jul-2024 09:16:59 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[31-Jul-2024 09:20:48 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[31-Jul-2024 09:22:00 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[31-Jul-2024 09:36:50 UTC] PHP Parse error:  Unclosed '(' in /var/www/html/wp-content/themes/profipaints/inc/template-tags.php on line 2220
+[31-Jul-2024 09:36:50 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[31-Jul-2024 09:36:50 UTC] PHP Warning:  Trying to access array offset on value of type bool in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[31-Jul-2024 10:02:46 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[31-Jul-2024 10:03:39 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23
+[31-Jul-2024 10:04:40 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-content/themes/profipaints/inc/customize-controls/control-editor.php on line 23

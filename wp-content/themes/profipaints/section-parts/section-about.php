@@ -2,7 +2,7 @@
 $id       = get_theme_mod('profipaints_about_id', esc_html__('about', 'profipaints'));
 $disable  = get_theme_mod('profipaints_about_disable') == 1 ? true : false;
 $meta_class = get_theme_mod('profipaints_about_meta') == 1 ? 'profipaints-meta' : '';
-$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-about section-padding-60 onepage-section {$meta_class}", 'about'));
+$section_classes = esc_attr(apply_filters('profipaints_section_class', "section-about section-padding-70 onepage-section {$meta_class}", 'about'));
 $title    = get_theme_mod('profipaints_about_title', esc_html__('about', 'profipaints'));
 $subtitle = get_theme_mod('profipaints_about_subtitle', esc_html__('Why choose Us', 'profipaints'));
 $description = get_theme_mod('profipaints_about_desc');
@@ -27,7 +27,7 @@ if (!$disable) {
         <section id="<?php echo ($id !== '') ? esc_attr($id) : 'about'; ?>" <?php do_action('profipaints_section_atts', 'about'); ?> class="<?php echo $section_classes; ?>">
         <?php } ?>
         <?php do_action('profipaints_section_before_inner', 'about'); ?>
-        <div class="<?php echo esc_attr(apply_filters('profipaints_section_container_class', 'container-fluid', 'about')); ?>">
+        <div class="<?php echo esc_attr(apply_filters('profipaints_section_container_class', 'container', 'about')); ?>">
             <?php if ($title) { ?>
                 <div class="section-title-area">
                     <?php
@@ -37,13 +37,13 @@ if (!$disable) {
                 </div>
             <?php } ?>
 
-            <div class="row row-fluid">
-                <div class="col-12 col-md-6 ps-0">
-                    <div class="about-bg" <?php echo $background_image ?>></div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="about-bg rounded-secondary" <?php echo $background_image ?>></div>
                 </div>
-                <div class="col-12 col-md-6 pe-0">
+                <div class="col-12 col-md-6">
                     <?php if ($desc) { ?>
-                        <div class="about-section-desc">
+                        <div class="about-section-desc rounded-secondary">
                             <?php if ($subtitle) { ?>
                                 <?php if ($subtitle != '') echo '<h5 class="section-subtitle-inner">' . esc_html($subtitle) . '</h5>'; ?>
                             <?php } ?>

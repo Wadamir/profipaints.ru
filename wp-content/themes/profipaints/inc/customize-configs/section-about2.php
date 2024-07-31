@@ -6,7 +6,7 @@
 $wp_customize->add_panel(
     'profipaints_about2',
     array(
-        'priority'        => 160,
+        'priority'        => 150,
         'title'           => esc_html__('Раздел: Почему выбирают', 'profipaints'),
         'description'     => '',
         'active_callback' => 'profipaints_showon_frontpage'

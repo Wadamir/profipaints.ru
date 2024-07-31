@@ -107,7 +107,7 @@ class Profipaints_Config
     {
 
         $sorted_sections = apply_filters('profipaints_frontpage_sections_order', array(
-            'aboutus', 'about2', 'features', 'about', 'buy', 'modules', 'videolightbox', 'gallery', 'counter', 'team',  'news', 'form', 'contact'
+            'about2', 'aboutus', 'features', 'about', 'buy', 'modules', 'videolightbox', 'gallery', 'counter', 'team',  'news', 'form', 'contact'
         ));
 
         $sections_config = array(

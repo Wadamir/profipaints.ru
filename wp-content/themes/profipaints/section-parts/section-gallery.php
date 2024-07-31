@@ -2,7 +2,7 @@
 $id                 = get_theme_mod('profipaints_gallery_id', esc_html__('gallery', 'profipaints'));
 $disable            = get_theme_mod('profipaints_gallery_disable', 1) ==  1 ? true : false;
 $meta_class         = get_theme_mod('profipaints_gallery_meta') == 1 ? 'profipaints-meta' : '';
-$section_classes    = esc_attr(apply_filters('profipaints_section_class', "section-gallery section-padding-60 onepage-section {$meta_class}", 'gallery'));
+$section_classes    = esc_attr(apply_filters('profipaints_section_class', "section-gallery section-padding-70 onepage-section {$meta_class}", 'gallery'));
 $title    = get_theme_mod('profipaints_gallery_title', esc_html__('Gallery', 'profipaints'));
 $subtitle = get_theme_mod('profipaints_gallery_subtitle', esc_html__('Section subtitle', 'profipaints'));
 $desc     = get_theme_mod('profipaints_gallery_desc');
