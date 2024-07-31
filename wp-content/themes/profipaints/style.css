@@ -3407,6 +3407,12 @@ section>.customize-partial-edit-shortcut button {
     letter-spacing: 3px;
 }
 
+.hero-content-style2 .h1 {
+    font-size: 64px;
+    /* letter-spacing: -3px; */
+    font-weight: 500;
+}
+
 .hero-content-style2 .hcl2-content {
     padding: 50px 0px;
     padding: 3.125rem 0px;
@@ -3418,10 +3424,20 @@ section>.customize-partial-edit-shortcut button {
 }
 
 @media (max-width: 1199px) {
+    .hero-content-style2 .h1 {
+        font-size: 54px;
+    }
+}
 
-    .hero-content-style2 .hcl2-content,
-    .hero-content-style2 .hcl2-image {
-        /* text-align: center; */
+@media (max-width: 767px) {
+    .hero-content-style2 .h1 {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 490px) {
+    .hero-content-style2 .h1 {
+        font-size: 36px;
     }
 }
 
