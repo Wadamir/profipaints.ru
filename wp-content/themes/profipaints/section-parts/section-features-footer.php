@@ -6,6 +6,7 @@ $subtitle = get_theme_mod('profipaints_features_subtitle', esc_html__('Why choos
 $profipaints_features_tab1_title = get_theme_mod('profipaints_features_tab1_title', esc_html__('Информация о товаре', 'profipaints'));
 $profipaints_features_tab2_title = get_theme_mod('profipaints_features_tab2_title', esc_html__('Сертификаты', 'profipaints'));
 $profipaints_features_tab3_title = get_theme_mod('profipaints_features_tab3_title', esc_html__('Техничка', 'profipaints'));
+$profipaints_modal_id = get_theme_mod('profipaints_features_modal', '');
 if (profipaints_is_selective_refresh()) {
     $disable = false;
 }
@@ -133,6 +134,11 @@ if (!$disable && !empty($data)) {
                                         <div class="tab-pane fade show active" id="info-<?php echo $k ?>" role="tabpanel" aria-labelledby="info-tab-<?php echo $k ?>">
                                             <p class="subtitle h5 mb-2"><?php echo esc_html($f['subtitle']); ?></p>
                                             <?php echo apply_filters('the_content', $f['desc']); ?>
+                                            <?php
+                                            if ($profipaints_modal_id !== '') {
+                                                echo '<p class="text-center"><a href="#" class="btn btn-medium btn-secondary" data-bs-toggle="modal" data-bs-target="#' . esc_attr($profipaints_modal_id) . '">' . esc_html__('Заказать', 'profipaints') . '</a></p>';
+                                            }
+                                            ?>
                                         </div>
                                         <?php
                                         if (($f['link'] && $f['link__text']) || ($f['link2'] && $f['link2__text']) || ($f['link3'] && $f['link3__text']) || ($f['link4'] && $f['link4__text']) || ($f['link5'] && $f['link5__text']) || ($f['link6'] && $f['link6__text']) || ($f['link7'] && $f['link7__text']) || ($f['link8'] && $f['link8__text']) || ($f['link9'] && $f['link9__text']) || ($f['link10'] && $f['link10__text'])) {

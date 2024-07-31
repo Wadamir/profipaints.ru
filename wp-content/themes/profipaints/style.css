@@ -3627,7 +3627,7 @@ section>.customize-partial-edit-shortcut button {
     /* font-style: italic; */
     font-weight: 600;
     line-height: var(--secondary-line-height, 1.25);
-    min-height: 4em;
+    /* min-height: 4em; */
 }
 
 .feature-item h3 {
@@ -7027,7 +7027,7 @@ input#active-menu {
 }
 
 .modal-dialog .modal-content {
-    border-radius: 0px;
+    border-radius: var(--secondary-border-radius, 25px);
 }
 
 .modal-dialog .feature-item,

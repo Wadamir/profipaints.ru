@@ -203,6 +203,23 @@ $wp_customize->add_control(
     )
 );
 
+// Modal id
+$wp_customize->add_setting(
+    'profipaints_features_modal',
+    array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'default'           => '',
+    )
+);
+$wp_customize->add_control(
+    'profipaints_features_modal',
+    array(
+        'label'         => esc_html__('Ссылка на модальное окно', 'profipaints'),
+        'section'         => 'profipaints_features_settings',
+        'description'   => '',
+    )
+);
+
 // profipaints_add_upsell_for_section( $wp_customize, 'profipaints_features_settings' );
 
 
