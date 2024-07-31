@@ -52,7 +52,7 @@ if (!$disable) {
                     <?php } ?>
                     <?php if ($form) { ?>
                         <div class="about-form">
-                            <a href="#" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#about-modal"><?php echo esc_html__('Связаться с нами', 'profipaints'); ?></a>
+                            <a href="#" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#about-modal" data-title="<?php echo esc_html($title) ?>"><?php echo esc_html__('Связаться с нами', 'profipaints'); ?></a>
                         </div>
                     <?php } ?>
                 </div>

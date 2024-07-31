@@ -136,7 +136,7 @@ if (!$disable && !empty($data)) {
                                             <?php echo apply_filters('the_content', $f['desc']); ?>
                                             <?php
                                             if ($profipaints_modal_id !== '') {
-                                                echo '<p class="text-center"><a href="#" class="btn btn-medium btn-secondary" data-bs-toggle="modal" data-bs-target="#' . esc_attr($profipaints_modal_id) . '">' . esc_html__('Заказать', 'profipaints') . '</a></p>';
+                                                echo '<p class="text-center"><a href="#" class="btn btn-medium btn-secondary" data-bs-toggle="modal" data-bs-target="#' . esc_attr($profipaints_modal_id) . '" data-title="' . esc_html($f['title']) . '">' . esc_html__('Заказать', 'profipaints') . '</a></p>';
                                             }
                                             ?>
                                         </div>

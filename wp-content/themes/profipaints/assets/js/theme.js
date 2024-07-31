@@ -1,9 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     // When the event DOMContentLoaded occurs, it is safe to access the DOM
     console.log('DOM fully loaded and parsed');
-
+    modalEvents();
     featureItemsEvents();
 });
+
+
+const modalEvents = () => {
+    var myModalEl = document.getElementById('about-modal')
+    console.log(myModalEl);
+    myModalEl.addEventListener('show.bs.modal', function (event) {
+        console.log('show.bs.modal');
+        const modal_title_el = document.getElementById('modal-title');
+        let title = modal_title_el.textContent;
+        let opener = document.activeElement;
+        let opener_title = opener.getAttribute('data-title');
+        if (modal_title_el && opener_title) {
+            modal_title_el.textContent = opener_title;
+        }
+    })
+}
 
 const featureItemsEvents = () => {
     const feature_items = document.getElementsByClassName('feature-item');
