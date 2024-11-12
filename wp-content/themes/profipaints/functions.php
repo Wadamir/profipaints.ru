@@ -407,7 +407,7 @@ if (!function_exists('add_preconnect_links')) :
         foreach ($domains as $domain) {
 ?>
             <link rel="preconnect" href="<?php echo $domain; ?>" crossorigin>
-<?php
+    <?php
         }
     }
     add_action('wp_head', 'add_preconnect_links', 5);
@@ -605,3 +605,273 @@ require get_template_directory() . '/inc/admin/dashboard.php';
  * @since 2.2.1
  */
 require get_template_directory() . '/inc/admin/class-editor.php';
+
+/*
+ * Form to Add Lesson
+ */
+
+function add_lesson_form()
+{
+    $language_terms = get_terms('language', [
+        'hide_empty' => false,
+    ]);
+    // var_dump($language_terms);
+    ob_start();
+    ?>
+    <div class="modal fade" id="addLesson" tabindex="-1" aria-labelledby="addLessonLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h5" id="addLessonLabel">Add Lesson</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="hidden" name="lesson_id" id="lessonId">
+                        <div id="lesson_photo" class="mb-3">
+                            <img src="/wp-content/themes/profipaints/assets/images/no-image.png" class="lesson-image" id="lessonThumb" alt="Lesson Thumbnail">
+                            <input type="hidden" name="lesson_thumb_id" id="lessonThumbId">
+                            <div id="lesson_photo__preloader">
+                                <div class="lds-roller">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div id="lesson_photo__input_wrapper">
+                                <label for="lesson_photo__input" id="lesson_photo__input_label" class="lesson-image-input-wrapper cover-image lesson-image-add">
+                                    <span class="lesson-image-add-text">+ Replace Photo</span>
+                                    <input type="file" class="fm-image-input" aria-label="" id="lesson_photo__input" accept="image/*" style="display:none">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lessonTitle" class="form-label">Lesson Title</label>
+                            <input type="text" name="lesson_title" class="form-control lesson_title" id="lessonTitle">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lessonDescription" class="form-label">Lesson Description</label>
+                            <textarea name="lesson_description" class="form-control" id="lessonDescription" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lessonLanguage" class="form-label">Language</label>
+                            <select name="lesson_language" class="form-select" id="lessonLanguage">
+                                <option value="">Select Language</option>
+                                <?php
+                                foreach ($language_terms as $term) {
+                                    echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" name="lesson_status" class="form-check-input" id="lessonStatus">
+                            <label class="form-check-label" for="lessonStatus">Lesson finished</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="save-lesson" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+    return ob_get_clean();
+}
+
+add_shortcode('add_lesson_form', 'add_lesson_form');
+
+add_action('wp_ajax_save_lesson', 'save_lesson');
+function save_lesson()
+{
+    $response = [];
+    $lesson_id = intval($_POST['lesson_id']);
+    $response['lesson_id'] = $lesson_id;
+    $lesson_thumbnail_id = isset($_POST['lesson_thumbnail_id']) ? intval($_POST['lesson_thumbnail_id']) : null;
+    $response['lesson_thumbnail_id'] = $lesson_thumbnail_id;
+    $title = $_POST['lesson_title'];
+    $description = $_POST['lesson_description'];
+    $language_id = ($_POST['lesson_language'] && intval($_POST['lesson_language']) > 0) ? intval($_POST['lesson_language']) : null;
+    $status = (isset($_POST['lesson_status']) && ($_POST['lesson_status'] === '1' || $_POST['lesson_status'] === 'finished')) ? 'finished' : 'active';
+    $response['message'] = 'Trying to save lesson ' . $title . ' with status ' . $status;
+    if (isset($lesson_id) && $lesson_id !== null && intval($lesson_id) > 0) {
+        $post_id = wp_update_post(array(
+            'ID' => $lesson_id,
+            'post_title' => esc_html($title),
+            'post_content' => sanitize_post($description),
+            'post_status' => 'publish',
+            'post_type' => 'lessons'
+        ));
+        $response['message'] .= ' | Lesson updated ' . $post_id;
+    } else {
+        $post_id = wp_insert_post(array(
+            'post_title' => esc_html($title),
+            'post_content' => sanitize_post($description),
+            'post_status' => 'publish',
+            'post_type' => 'lessons'
+        ));
+        $response['message'] .= ' | Lesson created ' . $post_id;
+    }
+    if ($post_id) {
+        $response['post_id'] = $post_id;
+        $meta_status = get_post_meta($post_id, 'status', true);
+        if ($meta_status && $meta_status !== null && $meta_status !== '' && $meta_status !== [] && $meta_status !== $status) {
+            $post_meta_result = update_post_meta($post_id, 'status', $status);
+        } else if ($meta_status !== $status) {
+            $post_meta_result = add_post_meta($post_id, 'status', $status);
+        } else {
+            $post_meta_result = 'unchanged';
+        }
+        if ($post_meta_result) {
+            $response['post_meta_result'] = $post_meta_result;
+            $response['message'] .= ' | Lesson status saved ' . $status;
+        } else {
+            $response['status'] = 'error';
+            $response['message'] .= ' | Error saving lesson status';
+        }
+    } else {
+        $response['status'] = 'error';
+        $response['message'] .= ' | Error saving lesson';
+    }
+
+    if ($response['status'] !== 'error') {
+        if ($language_id !== null) {
+            $language_terms = wp_get_post_terms($post_id, 'language');
+            $response['current_language'] = $language_terms;
+            if (!$language_terms || $language_terms === null || $language_terms === []) {
+                $language_result = wp_set_post_terms($post_id, $language_id, 'language');
+            } else {
+                $language_result = 'unchanged';
+            }
+            if ($language_result) {
+                $response['message'] .= ' | Lesson language saved ' . $language_id;
+            } else {
+                $response['status'] = 'error';
+                $response['message'] .= ' | Error saving lesson language';
+            }
+        } else {
+            wp_delete_object_term_relationships($post_id, 'language');
+            $response['message'] .= ' | Lesson language removed';
+        }
+    }
+
+    if ($response['status'] !== 'error') {
+        $current_thumbnail_id = get_post_thumbnail_id($post_id);
+        $response['current_thumbnail_id'] = $current_thumbnail_id;
+        if ($lesson_thumbnail_id !== $current_thumbnail_id) {
+            $thumbnail_result = set_post_thumbnail($post_id, $lesson_thumbnail_id);
+            if ($thumbnail_result) {
+                $response['message'] .= ' | Lesson thumbnail saved ' . $lesson_thumbnail_id;
+            } else {
+                $response['status'] = 'error';
+                $response['message'] .= ' | Error saving lesson thumbnail';
+            }
+        } else {
+            $response['message'] .= ' | Lesson thumbnail unchanged ' . $lesson_thumbnail_id;
+        }
+    }
+
+    wp_send_json($response);
+
+    wp_die();
+}
+
+add_action('wp_ajax_get_lesson', 'get_lesson');
+function get_lesson()
+{
+    $lesson_id = $_POST['lesson_id'];
+    $lesson = get_post($lesson_id);
+    if (!$lesson) {
+        wp_send_json(array('status' => 'error', 'message' => 'Lesson not found'), 404);
+    }
+    $lesson_id = $lesson->ID;
+    $lesson_title = htmlspecialchars_decode($lesson->post_title);
+    $lesson_content = htmlspecialchars_decode($lesson->post_content);
+    $lesson_status = get_post_meta($lesson_id, 'status', true);
+    $lesson_terms = wp_get_post_terms($lesson_id, 'language');
+    $lesson_language_id = $lesson_terms[0]->term_id;
+    $lesson_thumbnail = (get_the_post_thumbnail_url($lesson_id)) ? get_the_post_thumbnail_url($lesson_id) : '/wp-content/themes/profipaints/assets/images/no-image.png';
+    wp_send_json(array('status' => 'success', 'message' => 'Lesson fetched', 'lesson_id' => $lesson_id, 'lesson_title' => $lesson_title, 'lesson_content' => $lesson_content, 'lesson_status' => $lesson_status, 'lesson_language' => $lesson_language_id, 'lesson_thumbnail' => $lesson_thumbnail), 200);
+    wp_die();
+}
+
+
+add_action('wp_ajax_remove_lesson', 'remove_lesson');
+function remove_lesson()
+{
+    $lesson_id = $_POST['lesson_id'];
+    $result = wp_delete_post($lesson_id);
+    if ($result) {
+        wp_send_json(array('status' => 'success', 'message' => 'Lesson removed'), 200);
+    } else {
+        wp_send_json(array('status' => 'error', 'message' => 'Error removing lesson'));
+    }
+    wp_die();
+}
+
+add_action('wp_ajax_upload_photo', 'upload_photo');
+function upload_photo()
+{
+    $response = [];
+
+    $lessonId = filter_input(INPUT_POST, 'lesson_id');
+    $response['lesson_id'] = $lessonId;
+    $imageName = filter_input(INPUT_POST, 'image_name');
+    $response['image_name'] = $imageName;
+    $image = filter_input(INPUT_POST, 'image');
+    $response['image'] = $image;
+
+    list($mimeContent, $content) = explode(',', $image);
+
+    $mimeType = str_replace(['data:', ';base64'], '', $mimeContent);
+
+    $uploadDirPath = wp_upload_dir()['path'];
+
+    $filePath = $uploadDirPath . '/' . $imageName;
+
+    if (empty($content)) {
+        wp_send_json('File is not selected.', 500);
+    }
+
+    if (strlen($content) > wp_max_upload_size()) {
+        wp_send_json('It is too large than expected.', 500);
+    }
+
+    if (!in_array($mimeType, get_allowed_mime_types())) {
+        wp_send_json('WordPress doesn\'t allow this type of uploads.', 500);
+    }
+
+    $i = 0;
+    while (file_exists($filePath)) {
+        $filePath = $uploadDirPath . '/' . (++$i) . '_' . $imageName;
+    }
+
+    file_put_contents($filePath, base64_decode($content));
+
+    $uploadId = wp_insert_attachment(array(
+        'guid'           => $filePath,
+        'post_mime_type' => str_replace(['data:', ';base64'], '', $mimeType),
+        'post_title'     => preg_replace('/\.[^.]+$/', '', $imageName),
+        'post_content'   => '',
+        'post_status'    => 'inherit'
+    ), $filePath);
+    $response['upload_id'] = $uploadId;
+
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+
+    wp_update_attachment_metadata($uploadId, wp_generate_attachment_metadata($uploadId, $filePath));
+
+    $imgSrc = wp_get_attachment_url($uploadId);
+    $response['img_src'] = $imgSrc;
+    $response['status'] = 'success';
+
+    wp_send_json($response, 200);
+    wp_die();
+}

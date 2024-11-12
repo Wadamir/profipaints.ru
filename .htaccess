@@ -1,7 +1,7 @@
 # BEGIN WordPress
-# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
-# dynamically generated, and should only be modified via WordPress filters.
-# Any changes to the directives between these markers will be overwritten.
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -13,3 +13,11 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+php_value upload_max_filesize 128M
+php_value post_max_size 128M
+php_value memory_limit 128M
+
+#Дополнительные параметры
+php_value max_execution_time 300
+php_value max_input_time 300

@@ -70,6 +70,8 @@ do_action('profipaints_site_end');
 
 <?php do_action('profipaints_after_site_end'); ?>
 
+<?php echo do_shortcode('[add_lesson_form]') ?>
+
 <?php wp_footer(); ?>
 
 <?php profipaints_load_section('hero-footer'); ?>

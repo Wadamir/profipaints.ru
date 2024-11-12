@@ -1,14 +1,248 @@
 document.addEventListener("DOMContentLoaded", function () {
     // When the event DOMContentLoaded occurs, it is safe to access the DOM
     console.log('DOM fully loaded and parsed');
+    modalAddLessonEvents();
     modalEvents();
     featureItemsEvents();
+    btnSaveLessonEvents();
+    btnEditLessonEvents();
+    btnRemoveLessonEvents();
+    setPhotosEvents();
 });
 
+const setPhotosEvents = () => {
+    let lessonPhotosWrapper = document.getElementById('lesson_photo__input_wrapper')
+    if (lessonPhotosWrapper === undefined || lessonPhotosWrapper === null || lessonPhotosWrapper === '') {
+        return false;
+    }
+
+    let inputImage = document.getElementById("lesson_photo__input")
+    inputImage.addEventListener("change", inputPhoto, false)
+
+    let removeImage = document.getElementsByClassName("lesson-image-remove")
+    for (let i = 0, removeImageLength = removeImage.length; i < removeImageLength; i++) {
+        let removeImageEl = removeImage[i]
+        let mainParent = removeImageEl.parentElement.parentElement.parentElement
+        removeImageEl.addEventListener("click", () => {
+            let imgId = removeImageEl.dataset.id
+            mainParent.remove()
+        }, false)
+    }
+}
+
+const inputPhoto = () => {
+    const lessonIdEl = document.getElementById('lessonId'),
+        lessonThumbEl = document.getElementById('lessonThumb'),
+        lessonThumbIdEl = document.getElementById('lessonThumbId'),
+        inputWrapperEl = document.getElementById("lesson_photo__input_wrapper"),
+        inputPhotoEl = document.getElementById("lesson_photo__input"),
+        photoPreloader = document.getElementById("lesson_photo__preloader"),
+        data = new FormData();
+
+    // const inputWrapperHtml = '<div id="lesson_photo__input_wrapper"><label for="lesson_photo__input" id="lesson_photo__input_label" class="lesson-image-input-wrapper cover-image lesson-image-add"><span class="lesson-image-add-text">+ Replace Photo</span><input type="file" class="fm-image-input" aria-label="" id="lesson_photo__input" accept="image/*" multiple="" style="display:none"></label>/div>'
+
+    photoPreloader.style.display = 'flex';
+    inputPhotoEl.removeEventListener("change", inputPhoto);
+
+    let lesson_id = lessonIdEl.value;
+    let all_files = inputPhotoEl.files;
+
+    // if (lesson_id !== undefined && lesson_id !== null && lesson_id !== '' && lesson_id !== '0' && lesson_id !== 0) {
+        if (all_files.length > 0) {
+            inputWrapperEl.remove();
+            let j = 0;
+            for (let i = 0, file; file = all_files[i]; i++) {
+                if (file) {
+                    let reader = new FileReader();
+
+                    reader.readAsDataURL(file, 'UTF-8');
+                    reader.onload = function (e) {
+
+                        data.append('action', 'upload_photo');
+                        data.append('lesson_id', lesson_id);
+                        data.append('image', reader.result);
+                        data.append('image_name', file.name);
+
+                        fetch('/wp-admin/admin-ajax.php', {
+                            method: 'POST',
+                            body: data
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('file uploaded', data);
+                            if (data.status === 'success' && data.img_src !== undefined && data.img_src !== null && data.img_src !== '' && data.upload_id !== undefined && data.upload_id !== null && data.upload_id !== '') {
+                                lessonThumbEl.src = data.img_src;
+                                lessonThumbIdEl.value = data.upload_id;
+                            }
+                        }).catch(function (error) {
+                            console.log('file uploading failed!');
+                            console.log(error);
+                        }).finally(function () {
+                            setPhotosEvents();
+                            photoPreloader.style.display = 'none';
+                            // window.location.reload();
+                        });
+                    }
+                }
+            }
+        }
+    // }
+}
+
+const btnEditLessonEvents = () => {
+    let editLessonBtns = document.getElementsByClassName('btn-edit');
+    for (let i = 0; i < editLessonBtns.length; i++) {
+        editLessonBtns[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            let editLessonBtn = editLessonBtns[i];
+            let link = editLessonBtn.getElementsByClassName('elementor-button')[0];
+            let href = link.getAttribute('href');
+            lessonId = href.replace('#edit-', '');
+            editLesson(lessonId);
+        });
+    }
+}
+
+const editLesson = (lessonId) => {
+    console.log('edit Lesson' + lessonId);
+    let data = new FormData();
+    data.append('action', 'get_lesson');
+    data.append('lesson_id', lessonId);
+    console.log(data);
+    fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: data
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        const modal = document.getElementById('addLesson');
+        const modalTitle = document.getElementById('addLessonLabel');
+        var myModal = new bootstrap.Modal(modal, {
+            keyboard: false
+        });
+        modalTitle.textContent = 'Edit Lesson';
+        myModal.show();
+        let lessonIdEl = document.getElementById('lessonId');
+        let lessonTitleEl = document.getElementById('lessonTitle');
+        let lessonDescriptionEl = document.getElementById('lessonDescription');
+        let lessonLanguageEl = document.getElementById('lessonLanguage');
+        let lessonStatusEl = document.getElementById('lessonStatus');
+        let lessonThumbEl = document.getElementById('lessonThumb');
+        lessonIdEl.value = data.lesson_id;
+        lessonTitleEl.value = data.lesson_title;
+        lessonDescriptionEl.value = data.lesson_content;
+        lessonLanguageEl.value = (data.lesson_language !== null) ? data.lesson_language : '';
+        lessonStatusEl.checked = data.lesson_status === 'finished' ? true : false;
+        lessonThumbEl.src = data.lesson_thumbnail;
+    })
+    .catch(error => console.error('Error:', error))
+}
+
+const btnRemoveLessonEvents = () => {
+    let removeLessonBtns = document.getElementsByClassName('btn-remove');
+    for (let i = 0; i < removeLessonBtns.length; i++) {
+        removeLessonBtns[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            let removeLessonBtn = removeLessonBtns[i];
+            let link = removeLessonBtn.getElementsByClassName('elementor-button')[0];
+            let href = link.getAttribute('href');
+            lessonId = href.replace('#remove-', '');
+            let data = new FormData();
+            data.append('action', 'remove_lesson');
+            data.append('lesson_id', lessonId);
+            fetch ('/wp-admin/admin-ajax.php', {
+                method: 'POST',
+                body: data
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                if (data.status === 'success') {
+                    location.reload();
+                }
+            })
+            .catch(error => console.error('Error:', error))
+        });
+    }
+}
+
+const btnSaveLessonEvents = () => {
+    const saveLessonBtn = document.getElementById('save-lesson');
+    if (saveLessonBtn) {
+        saveLessonBtn.addEventListener('click', function () {
+            saveLesson();
+        });
+    }
+}
+
+const saveLesson = () => {
+    console.log('save Lesson');
+    const   modal = document.getElementById('addLesson'),
+            lessonIdEl = document.getElementById('lessonId'),
+            lessonThumbIdEl = document.getElementById('lessonThumbId'),
+            lessonTitleEl = document.getElementById('lessonTitle'),
+            lessonDescriptionEl = document.getElementById('lessonDescription'),
+            lessonLanguageEl = document.getElementById('lessonLanguage'),
+            lessonStatusEl = document.getElementById('lessonStatus');
+
+    let lessonId = lessonIdEl.value;
+    let lessonThumbId = lessonThumbIdEl.value;
+    let lessonTitle = lessonTitleEl.value;
+    let lessonDescription = lessonDescriptionEl.value;
+    let lessonLanguage = lessonLanguageEl.value;
+    let lessonStatus = lessonStatusEl.checked ? 'finished' : 'active';
+    console.log(lessonStatus);
+    let data = new FormData();
+    data.append('action', 'save_lesson');
+    data.append('lesson_id', lessonId);
+    data.append('lesson_thumbnail_id', lessonThumbId);
+    data.append('lesson_title', lessonTitle);
+    data.append('lesson_description', lessonDescription);
+    data.append('lesson_language', lessonLanguage);
+    data.append('lesson_status', lessonStatus);
+    console.log(data);
+    fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: data
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        if (data.status === 'success') {
+            var myModal = new bootstrap.Modal(modal);
+            myModal.hide();
+        }
+    })
+    .catch(error => console.error('Error:', error))
+    .finally(function () {
+        window.location.reload();
+    });
+}
+
+const modalAddLessonEvents = () => {
+    const addLessonBtn = document.getElementById('add_lesson');
+    if (addLessonBtn) {
+        addLessonBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const modal = document.getElementById('addLesson');
+            const modalTitle = document.getElementById('addLessonLabel');
+            modalTitle.textContent = 'Add Lesson';
+            let lessonIdEl = document.getElementById('lessonId');
+            lessonIdEl.value = '';
+            let lessonTitleEl = document.getElementById('lessonTitle');
+            lessonTitleEl.value = '';
+            let lessonDescriptionEl = document.getElementById('lessonDescription');
+            lessonDescriptionEl.value = '';
+            var myModal = new bootstrap.Modal(modal);
+            myModal.show();
+        });
+    }    
+}
 
 const modalEvents = () => {
     var myModalEl = document.getElementById('about-modal')
-    console.log(myModalEl);
+    // console.log(myModalEl);
     myModalEl.addEventListener('show.bs.modal', function (event) {
         console.log('show.bs.modal');
         const modal_title_el = document.getElementById('modal-title');
@@ -169,9 +403,9 @@ function _to_bool(v) {
 (function () {
     if (isMobile.any()) {
         /**
-         * https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+         * https://css-tricks.com/the-trick-to-viewport-lessons-on-mobile/
          */
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh lesson
         let vh = window.innerHeight * 0.01;
         let vw = window.innerWidth * 0.01;
         // Then we set the value in the --vh, --vw custom property to the root of the document

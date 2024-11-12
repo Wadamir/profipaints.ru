@@ -86,12 +86,12 @@ ROOT
     --secondary-font-size: 14px;
     --primary-line-height: 1.5;
     --secondary-line-height: 1.25;
-    --primary-border-radius: 15px;
-    --secondary-border-radius: 25px;
+    --primary-border-radius: 8px;
+    --secondary-border-radius: 15px;
     --primary-transition: all 0.25s linear;
     --secondary-transition: all 0.5s linear;
     --primary-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-    --secondary-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    --secondary-box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
     --primary-text-decoration: none;
     --secondary-text-decoration: underline;
     --primary-text-transform: uppercase;
@@ -2487,7 +2487,7 @@ Footer widgets
     text-transform: uppercase;
     border-radius: var(--primary-border-radius, 15px);
     /* box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset; */
-    font-size: 20px;
+    font-size: 14px;
     /* font-size: 0.8125rem; */
     font-weight: 400;
 }
@@ -2630,6 +2630,46 @@ Footer widgets
         padding: 10px 20px;
     }
 }
+
+.btn-medium a.elementor-button {
+    padding: 12px 20px;
+    width: 200px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-decoration: none !important;
+    border: 2px solid transparent;
+}
+
+.btn-medium.btn-edit a.elementor-button:hover,
+.btn-medium.btn-edit a.elementor-button:focus {
+    border-color: var(--accent-color, #03c4eb);
+    background-color: transparent;
+    color: var(--accent-color, #03c4eb);
+}
+
+.btn-medium.btn-edit a.elementor-button:hover svg,
+.btn-medium.btn-edit a.elementor-button:focus svg {
+    fill: var(--accent-color, #03c4eb);
+}
+
+.btn-medium.btn-remove a.elementor-button,
+.btn-medium.btn-remove a.elementor-button {
+    background-color: #660000;
+    color: var(--background-color, #FFFFFF);
+}
+
+.btn-medium.btn-remove a.elementor-button:hover,
+.btn-medium.btn-remove a.elementor-button:focus {
+    background-color: transparent;
+    border-color: #660000;
+    color: #660000;
+}
+
+.btn-medium.btn-remove a.elementor-button:hover svg,
+.btn-medium.btn-remove a.elementor-button:focus svg {
+    fill: #660000;
+}
+
 
 /* Loading
 ------------------------------*/
@@ -7036,7 +7076,7 @@ input#active-menu {
 .modal-dialog .modal-header .btn-close:hover,
 .modal-dialog .modal-header .btn-close:focus,
 .modal-dialog .modal-header .btn-close:active {
-    background: none;
+    /* background: none; */
     width: 24px;
     height: 24px;
     outline: none;
@@ -7044,7 +7084,7 @@ input#active-menu {
 }
 
 .modal-dialog .modal-content {
-    border-radius: var(--secondary-border-radius, 25px);
+    /* border-radius: var(--secondary-border-radius, 25px); */
 }
 
 .modal-dialog .feature-item,
@@ -7096,3 +7136,193 @@ input#active-menu {
 .push li>a:hover {
     text-decoration: underline dotted var(--accent-color, #0A5F5A);
 }
+
+#lesson_photo {
+    position: relative;
+    text-align: center;
+}
+
+#lesson_photo>img {
+    width: 300px;
+    border-radius: 8px;
+    /* box-shadow: var(--secondary-box-shadow, 0 0 10px rgba(0, 0, 0, 0.25)); */
+}
+
+#lesson_photo>#lesson_photo__input_wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin-left: -150px;
+    width: 300px;
+    height: 100%;
+    cursor: pointer;
+}
+
+#lesson_photo__input_wrapper>label {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin-left: -150px;
+    width: 300px;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#lesson_photo__input_wrapper:hover>label {
+    background: rgba(255, 255, 255, 0.75);
+    visibility: visible;
+}
+
+
+
+/********* preloader *********/
+#lesson_photo__preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    /* width: calc(100% - 4px);
+    height: calc(100% - 4px); */
+    /* margin: -13px; */
+    /* border-radius: 0; */
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.roller_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--turquoise-palette-600-primary, #06BCC1);
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/********* preloader end *********/
