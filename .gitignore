@@ -11,7 +11,13 @@ wp-config-sample.php
 /wp-content/plugins/akismet/
 /wp-content/plugins/classic-editor/
 /wp-content/plugins/contact-form-7/
-/wp-content/plugins/elementor/
+/wp-content/plugins/elementor/*
+!/wp-content/plugins/elementor/
+/wp-content/plugins/elementor/includes/*
+!/wp-content/plugins/elementor/includes/
+/wp-content/plugins/elementor/includes/widgets/*
+!/wp-content/plugins/elementor/includes/widgets/
+!/wp-content/plugins/elementor/includes/widgets/progress-new.php
 /wp-content/plugins/elementor-pro/
 /wp-content/plugins/safe-svg/
 
