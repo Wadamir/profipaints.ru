@@ -418,7 +418,7 @@ class Widget_Progress_New extends Widget_Base
         $this->add_render_attribute(
             'progress_new_bar',
             [
-                'class' => 'elementor-progress_new_bar',
+                'class' => ['elementor-progress_new_bar', 'huyak'],
                 'data-max' => $progress_new_percentage,
             ]
         );
@@ -481,7 +481,7 @@ class Widget_Progress_New extends Widget_Base
             }
 
             view.addRenderAttribute( 'progress_newWrapper' ,
-            { 'class' : [ 'elementor-progress_new-wrapper' , 'progress_new-' + settings.progress_new_type ], 'role' : 'progress_new_bar' , 'aria-valuemin' : '0' , 'aria-valuemax' : '100' , 'aria-valuenow' : progress_new_percentage,
+            { 'class' : [ 'elementor-progress_new-wrapper' , 'huyak' , 'progress_new-' + settings.progress_new_type ], 'role' : 'progress_new_bar' , 'aria-valuemin' : '0' , 'aria-valuemax' : '100' , 'aria-valuenow' : progress_new_percentage,
             }
             );
 
@@ -497,7 +497,7 @@ class Widget_Progress_New extends Widget_Base
                 <{{ title_tag }} {{{ view.getRenderAttributeString( 'title' ) }}}>{{{ settings.title }}}</{{ title_tag }}>
                 <# } #>
                     <div {{{ view.getRenderAttributeString( 'progress_newWrapper' ) }}}>
-                        <div class="elementor-progress_new_bar" data-max="{{ progress_new_percentage }}">
+                        <div class="elementor-progress_new_bar huyak" data-max="{{ progress_new_percentage }}">
                             <span {{{ view.getRenderAttributeString( 'inner_text' ) }}}>{{{ settings.inner_text }}}</span>
                             <# if ( 'show'===settings.display_percentage ) { #>
                                 <span class="elementor-progress_new-percentage">{{{ progress_new_percentage }}}%</span>
